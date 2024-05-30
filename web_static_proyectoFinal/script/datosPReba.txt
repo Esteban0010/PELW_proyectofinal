@@ -1,0 +1,21 @@
+//////
+paquetesLuna.forEach(paquete => {
+  const carta = document.createElement('div');
+  carta.classList.add('carta');
+  
+  const contenido = `
+    <div class="contenido">
+      <h2>${paquete.nombre}</h2>
+      <p>${paquete.descripcion}</p>
+      <p><strong>Atracciones:</strong> ${paquete.atracciones.join(', ')}</p>
+      <p><strong>Duración:</strong> ${paquete.duracion}</p>
+      <p class="precio"><strong>Precio:</strong> ${paquete.precio}</p>
+      <p><strong>Incluye:</strong> ${paquete.incluye.join(', ')}</p>
+    </div>
+  `;
+  
+  carta.innerHTML = contenido;
+  contenedorCartas.appendChild(carta);
+});
+
+//////
