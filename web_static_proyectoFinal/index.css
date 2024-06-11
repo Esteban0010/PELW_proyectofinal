@@ -25,8 +25,16 @@ position: relative;
 .wrapper_header{
     width: 100%;
 }
+.wrapper_header li:hover{
+    transition: all 0.5s;
+   transform: scale(1.15);
+}
+.cart-icon{
+    width:20px;
+    filter: invert(90%)
+    
+}
 header {
-
     position: absolute;
     left: 0;
     width: 100%;
@@ -35,6 +43,16 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
+}
+
+.cuenta{
+    background-color: #b82652;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
