@@ -13,8 +13,8 @@ h1 {
 
 #divUsoOpcional{
   background-color: red;
+  font-weight: 400;
 }
-
 
 #enunciado, form {
   background-color: #1c1616;
@@ -68,4 +68,9 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.input_error{
+  background-color: red;
+  border-color: #333333;
 }
