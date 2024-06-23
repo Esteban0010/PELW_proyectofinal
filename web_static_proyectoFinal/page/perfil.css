@@ -1,0 +1,46 @@
+.contenedor_perfil{
+    margin-top: 130px;
+    width: 100%;
+}
+.cont_datos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.datos_U{
+    background-color: rgb(90, 98, 98);
+    width: 25%;
+    border-radius: 30px;
+    min-height: 500px;
+    margin: 0 auto;
+    
+}
+.img_perfil{
+    width: 90%;
+    height: 50%;
+    background-color: rgb(255, 145, 0);
+    border-radius: 100%;
+    margin: 20px 5%;
+}
+.img_visa{
+width: 90%;
+margin:20px 5%;
+}
+.datos_U p{
+    margin-left: 10px;
+    line-height: 2.5;
+}
+.cont_datos_p{
+    width: 25%;
+    min-height: 500px;
+}
+.datos_p{
+    border-radius: 20px;
+    width: 100%;
+    min-height: 290px;
+    background-color: rgb(90, 98, 98);
+}
+.datos_p p{
+    margin-left: 10px;
+    line-height: 2.5;
+}

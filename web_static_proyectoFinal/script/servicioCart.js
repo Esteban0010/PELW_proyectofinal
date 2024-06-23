@@ -1,7 +1,6 @@
 
 function agregarAlCarrito(producto) {
-    const memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
-    console.log(memoriaCart)
+    let memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
     if (!memoriaCart) {
         const nuevoProducto = producto;
         localStorage.setItem("paquetes", JSON.stringify([nuevoProducto]))
@@ -17,6 +16,19 @@ function agregarAlCarrito(producto) {
         }
     }
     actualizarNumCarrito()
+}
+function eliminardelCarrito(id) {
+    const memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
+    const indice = memoriaCart.findIndex(item => item.id === id);
+    if (indice !== -1) {
+        memoriaCart.splice(indice, 1);
+        localStorage.setItem("paquetes",JSON.stringify(memoriaCart))
+        console.log('Elemento eliminado correctamente.');
+      } else {
+        console.log('No se encontró ningún elemento con ese ID.');
+      }
+      actualizarNumCarrito()
+      cargarCartShop()
 }
 
 function actualizarNumCarrito(){

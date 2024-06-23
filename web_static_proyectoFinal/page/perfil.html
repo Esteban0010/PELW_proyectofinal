@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="./perfil.css">
+    <script  src="/script/servicioCart.js"></script>
+</head>
+<body>
+    <div class="wrapper_header" id="wrapper_header"></div>
+    <div class="contenedor_perfil">
+        <div class="cont_datos">
+            <div class="datos_U">
+                <img src="../assets/atronauta.jpg" alt="foto astronauta" class="img_perfil">
+                <h3 id="nombreU"></h3>
+                <hr >
+                <p>Direccion</p>
+                <p>Telefono</p>
+            </div>
+            <div class="cont_datos_p">
+                <div class="datos_p" style="margin-bottom: 20px;">
+                    <h1>Detalles</h1>
+                    <p id="nombreD">Nombre</p>
+                    <p id="apellidoD">Apellido</p>
+                    <p id="fechaND">fecha de nacimiento</p>
+                    <p>Genero</p>
+                </div>
+                <div class="datos_p">
+                    <p>Direccion:  Catriel 1465</p>
+                    <p>Ciudad: Neuquen</p>
+                    <p>Pais: Argentina</p>
+                    <p>Codigo Postal: 8300</p>
+                </div>
+            </div>
+            <div class="datos_U">
+                <h1>Metodos de Pago</h1>
+                <img src="../assets/visa.PNG" alt="imagen tarjeta" class="img_visa">
+                <hr>
+                <p>Tipo de tarjeta</p>
+                <p>Expira</p>
+                <p>Numero de tarjeta</p>
+            </div>
+           
+        </div>
+        <div>
+            packetes Adquiridos
+        </div>
+        
+    </div>
+    <script>
+        const user = JSON.parse(localStorage.getItem("usuario"));
+         let memoriaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
+const usuarioEncontrado = memoriaUsuarios.find((objeto) => objeto.usuario === user.nombre);
+console.log(usuarioEncontrado,"asdsadsadsa")
+let nombreU = usuarioEncontrado.nombre +" "+usuarioEncontrado.apellido;
+let nombreUsuario = document.getElementById("nombreU");
+let nombreD = document.getElementById("nombreD");
+let apellidoD = document.getElementById("apellidoD");
+let fechaND = document.getElementById("fechaND")
+
+nombreUsuario.innerHTML = nombreU;
+nombreD.innerHTML ="Nombre: "+usuarioEncontrado.nombre;
+apellidoD.innerHTML ="Apellido: "+ usuarioEncontrado.apellido;
+fechaND.innerHTML ="fecha de nacimiento: "+ usuarioEncontrado.fechaNacimiento;
+    </script>
+     <script src="../componentes/header.js"></script>
+    
+</body>
+</html>

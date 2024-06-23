@@ -1,9 +1,10 @@
-let contenedorCartas = document.getElementById('wrapper_card');
+const contCartas = document.getElementById('contenedor_card');
 let i = 0;
 
-while (i < paquetesLuna.length && i < 3) {
+while (i < paquetesLuna.length && i < 5) {
+    console.log(paquetesLuna[i])
   let paquete = paquetesLuna[i];
-  let carta = document.createElement('div');
+  const carta = document.createElement('div');
 
 
   let contenido = `
@@ -21,10 +22,7 @@ while (i < paquetesLuna.length && i < 3) {
   `;
 
   carta.innerHTML = contenido;
-  contenedorCartas.appendChild(carta);
+  contCartas.appendChild(carta);
   carta.getElementsByTagName("button")[0].addEventListener("click",()=>agregarAlCarrito(paquete))
   i++;
 }
-
-
-

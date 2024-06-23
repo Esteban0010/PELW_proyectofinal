@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../page/carrito.css">
+    <script  src="/script/data_destinos.js"></script>
+    <script src="/script/servicioCart.js"></script>
 </head>
 <body>
-   
-    <div class="wrapper_cards_CartShop"></div>
-    <script src="../componentes/card_cartShop.js"></script>
+    <div class="wrapper_header" id="wrapper_header"></div>
+    <div class="cont_carrito">
+        <div class="cont_cart">
+            <h1>Finaliza la compra </h1>
+            <div class="wrapper_cards_CartShop" id='wrapper_cards_CartShop'>
+            </div>
+        </div>
+        <div class="datos_tarjeta">
+            <h2>Motodo de Pago</h2>
+            <div class="cont_imgVisa">
+                <img src="../assets/visa.PNG" alt="visa" class="visa_cartS">
+            </div>
+            <div class="cont_inputT">
+                <label for="nombre">nombre</label>
+                <input type="text" required>
+                <label for="nombre">numero tarjeta</label>
+                <input type="number" required>
+                <label for="nombre">documento</label>
+                <input type="number" required>
+                <label for="nombre">codigo</label>
+                <input type="number" required>
+                <label for="nombre">expira</label>
+                <input type="date"required>
+            </div>
+
+        </div>
+       
+    </div>
+    
+    <script src="../componentes/cards_CartShop.js"></script>
+    <script src="../componentes/header.js"></script>
+    <script src="../componentes/footer.js"></script>
 </body>
 </html>
