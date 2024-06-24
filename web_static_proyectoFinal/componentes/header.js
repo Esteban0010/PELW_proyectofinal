@@ -3,7 +3,6 @@ function montarHeader(){
     contenedorHeader.innerHTML = ''
     const header = document.createElement('div');
     const user = JSON.parse(localStorage.getItem("usuario"));
-    console.log(user)
     
     const contenidoHeader = `
     <header>

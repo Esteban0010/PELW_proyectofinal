@@ -1,0 +1,19 @@
+.contenedor_nosotros{
+    margin-top: 100px;
+    width: 80%;
+}
+
+.wrapper_contenidoNosotros{
+    display: flex;
+    min-height: 250px;
+    border: red solid 1px;
+}
+.contenidoNosotros{
+    width: 50%;
+    padding: 15px;
+}
+.contenidoNosotros p{
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
