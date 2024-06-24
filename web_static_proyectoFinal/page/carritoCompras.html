@@ -22,23 +22,23 @@
             <div class="cont_imgVisa">
                 <img src="../assets/visa.PNG" alt="visa" class="visa_cartS">
             </div>
-            <div class="cont_inputT">
-                <label for="nombre">nombre</label>
-                <input type="text" required>
-                <label for="nombre">numero tarjeta</label>
-                <input type="number" required>
-                <label for="nombre">documento</label>
-                <input type="number" required>
-                <label for="nombre">codigo</label>
-                <input type="number" required>
-                <label for="nombre">expira</label>
-                <input type="date"required>
-            </div>
-
-        </div>
-       
+            <form action="">
+                <div class="cont_inputT">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombreT" required>
+                    <label for="numTarjeta">Número de tarjeta</label>
+                    <input type="text" id="numTarjetaT" pattern="\d{16}" required>
+                    <label for="documento">Documento</label>
+                    <input type="text" id="documentoT" pattern="\d{8}" required>
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigoT" pattern="\d{3}"  required placeholder="ej: 123">
+                    <label for="expira">Expira</label>
+                    <input type="text" min="2024-06" id="expiraT" required placeholder="MM/AA">
+                </div>
+                <button type="submit">Comprar</button>
+            </form>
+        </div>      
     </div>
-    
     <script src="../componentes/cards_CartShop.js"></script>
     <script src="../componentes/header.js"></script>
     <script src="../componentes/footer.js"></script>

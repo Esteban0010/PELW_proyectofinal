@@ -108,7 +108,7 @@ function validar() {
     let memoriaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
     let i = 0;
     let userCoincidencia = false;
-    while(!userCoincidencia && memoriaUsuarios.length >i && usuarioEnMemoria.usuario){
+    while(!userCoincidencia && memoriaUsuarios.length >i ){
         let usuarioEnMemoria=memoriaUsuarios[i];
         if(usuarioEnMemoria.usuario == datos.usuario){
             error.usuario = "Nombre de Usuario ya existente";
