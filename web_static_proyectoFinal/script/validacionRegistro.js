@@ -163,9 +163,8 @@ function validar() {
         agregarErrores(error)
     } else {
         memoriaUsuarios.push(datos);
-        console.log(memoriaUsuarios)
         localStorage.setItem("usuarios",JSON.stringify(memoriaUsuarios));
-        let usuarioRegistrado = {"nombre":datos.usuario,"contraseña":datos.contraseña};
+        let usuarioRegistrado = datos;
             localStorage.setItem("usuario",JSON.stringify(usuarioRegistrado));
         alert("Los datos fueron correctos");
         cerrarModalr()

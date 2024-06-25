@@ -12,7 +12,6 @@ function ejecutarCompra(datosTarjeta) {
             let usuarioEnMemoria = memoriaUsuarios[i];
             if (usuarioEnMemoria.usuario == usuario.nombre) {
                 userCoincidencia = true;
-                console.log(usuario.nombre,"nombreee")
                 const indice = memoriaUsuarios.findIndex((objeto) => objeto.usuario === usuario.nombre);
                 let usuarioCompra = memoriaUsuarios[indice];
             
@@ -24,6 +23,7 @@ function ejecutarCompra(datosTarjeta) {
                     usuarioCompra.expira = datosTarjeta.expira;
                     memoriaUsuarios[indice] = usuarioCompra;
                     localStorage.setItem("usuarios", JSON.stringify(memoriaUsuarios));
+                    localStorage.setItem("usuario", JSON.stringify(memoriaUsuarios[indice]));
                 } else {
                     console.error("El objeto usuarioCompra no está definido.");
                 }

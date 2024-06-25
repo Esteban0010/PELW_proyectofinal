@@ -9,8 +9,8 @@ function loguin(){
         let usuarioRegistro = usuarios[i];
         if(usuarioRegistro.usuario == usuario && usuarioRegistro.contraseña == contraseña){
             userCoincidencia =true;
-            let usuarioRegistrado = {"nombre":usuario,"contraseña":contraseña};
-            localStorage.setItem("usuario",JSON.stringify(usuarioRegistrado));
+            // let usuarioRegistrado = {"nombre":usuario,"contraseña":contraseña};
+            localStorage.setItem("usuario",JSON.stringify(usuarioRegistro));
         }
         usuarioRegistro.usuario
         i++
