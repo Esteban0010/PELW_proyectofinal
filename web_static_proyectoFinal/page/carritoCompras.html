@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../page/carrito.css">
     <script  src="/script/data_destinos.js"></script>
     <script src="/script/servicioCart.js"></script>
+    <script src="/script/validacionTarjeta.js"></script>
 </head>
 <body>
     <div class="wrapper_header" id="wrapper_header"></div>
@@ -17,29 +18,13 @@
             <div class="wrapper_cards_CartShop" id='wrapper_cards_CartShop'>
             </div>
         </div>
-        <div class="datos_tarjeta">
-            <h2>Motodo de Pago</h2>
-            <div class="cont_imgVisa">
-                <img src="../assets/visa.PNG" alt="visa" class="visa_cartS">
-            </div>
-            <form action="">
-                <div class="cont_inputT">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombreT" required>
-                    <label for="numTarjeta">Número de tarjeta</label>
-                    <input type="text" id="numTarjetaT" pattern="\d{16}" required>
-                    <label for="documento">Documento</label>
-                    <input type="text" id="documentoT" pattern="\d{8}" required>
-                    <label for="codigo">Código</label>
-                    <input type="text" id="codigoT" pattern="\d{3}"  required placeholder="ej: 123">
-                    <label for="expira">Expira</label>
-                    <input type="text" min="2024-06" id="expiraT" required placeholder="MM/AA">
-                </div>
-                <button type="submit">Comprar</button>
-            </form>
-        </div>      
+        <div class="wrapper_MetodoPago" id="wrapper_MetodoPago">
+
+        </div>
+     
     </div>
     <script src="../componentes/cards_CartShop.js"></script>
+    <script src="../componentes/metodoPago.js"></script>
     <script src="../componentes/header.js"></script>
     <script src="../componentes/footer.js"></script>
 </body>

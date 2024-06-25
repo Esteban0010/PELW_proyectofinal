@@ -6,14 +6,27 @@
 .wrapper_contenidoNosotros{
     display: flex;
     min-height: 250px;
-    border: red solid 1px;
 }
 .contenidoNosotros{
+    align-items: center;
     width: 50%;
+    height: 400px;
     padding: 15px;
 }
 .contenidoNosotros p{
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 10px;
+}
+.cont_card_respresentantes{
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper_contenidoNosotros_representantes{
+    background-color: black;
+    height: 700px;
+}
+
+.cont_text_respresentantes{
+    margin: 50px 20px;
 }

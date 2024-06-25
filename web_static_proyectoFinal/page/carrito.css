@@ -17,7 +17,7 @@
 }
 
 .datos_tarjeta{
-  width: 50%;
+  width: 100%;
 }
 .btn_eliminar{
     cursor: pointer;
@@ -50,4 +50,7 @@
 .icon_eliminar{
     width: 100%;
    height: 100%;
+}
+.wrapper_MetodoPago{
+  width: 50%;
 }

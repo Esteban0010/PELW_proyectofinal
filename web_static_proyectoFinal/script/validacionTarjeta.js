@@ -11,14 +11,22 @@ function ejecutarCompra(datosTarjeta) {
         while (!userCoincidencia && memoriaUsuarios.length > i) {
             let usuarioEnMemoria = memoriaUsuarios[i];
             if (usuarioEnMemoria.usuario == usuario.nombre) {
-                error.usuario = "Nombre de Usuario ya existente";
                 userCoincidencia = true;
-                const indice = memoriaUsuarios.findIndex((objeto) => objeto.nombre === usuario.nombre);
-                memoriaUsuarios[indice].nombreTarjeta = datosTarjeta.nombre.toUpperCase();
-                memoriaUsuarios[indice].numTarjeta = datosTarjeta.numeroTarjeta;
-                memoriaUsuarios[indice].doc = datosTarjeta.documento;
-                memoriaUsuarios[indice].codigoTarjeta = datosTarjeta.codigo;
-                memoriaUsuarios[indice].expira = datosTarjeta.expira;
+                console.log(usuario.nombre,"nombreee")
+                const indice = memoriaUsuarios.findIndex((objeto) => objeto.usuario === usuario.nombre);
+                let usuarioCompra = memoriaUsuarios[indice];
+            
+                if (usuarioCompra) {
+                    usuarioCompra.nombreTarjeta = datosTarjeta.nombre.toUpperCase();
+                    usuarioCompra.numTarjeta = datosTarjeta.numeroTarjeta;
+                    usuarioCompra.doc = datosTarjeta.documento;
+                    usuarioCompra.codigoTarjeta = datosTarjeta.codigo;
+                    usuarioCompra.expira = datosTarjeta.expira;
+                    memoriaUsuarios[indice] = usuarioCompra;
+                    localStorage.setItem("usuarios", JSON.stringify(memoriaUsuarios));
+                } else {
+                    console.error("El objeto usuarioCompra no está definido.");
+                }
             }
         }
 
@@ -29,8 +37,10 @@ function ejecutarCompra(datosTarjeta) {
 }
 
 function validarDatosTarjeta() {
+    event.preventDefault();
     const error = {}
     let datosTarjeta = {}
+    let valNombre = /^[a-zA-ZáéíóúÁÉÍÓÚüÜ\s]{3,}$/;
     let valNumTarjeta = /^\d{16}$/
     let valDoc = /^\d{8}$/
     let valCodigo = /^\d{3}$/
@@ -41,21 +51,21 @@ function validarDatosTarjeta() {
     datosTarjeta.expira = document.getElementById('expiraT').value;
     if (!datosTarjeta.nombre) {
         error.nombre = "-El campo nombre es obligatorio"
-    } else if (datos.nombre) {
+    } else if (datosTarjeta.nombre) {
         if (!valNombre.test(datosTarjeta.nombre)) {
             error.nombre = "nombre debe cumplir con el formato permitido"
         }
     }
     if (!datosTarjeta.numeroTarjeta) {
         error.numT = "-El campo numero de tarjeta es obligatorio"
-    } else if (datos.nombre) {
+    } else if (datosTarjeta.numeroTarjeta) {
         if (!valNumTarjeta.test(datosTarjeta.numeroTarjeta)) {
             error.numT = "el numero de tarjeta debe ser de 16 digitos"
         }
     }
     if (!datosTarjeta.documento) {
         error.doc = "-El campo documento es obligatorio"
-    } else if (datos.nombre) {
+    } else if (datosTarjeta.documento) {
         if (!valDoc.test(datosTarjeta.documento)) {
             error.doc = "el numero de tarjeta debe ser de 16 digitos"
         }
@@ -82,9 +92,18 @@ function validarDatosTarjeta() {
         }
     }
 
-    if (error) {
-
+    if (error.length>0) {
+        const contenedorError = document.getElementById('errores_tarjeta');
+        let mensajeError = '';
+    
+        for (const prop in error) {
+            if (error.hasOwnProperty(prop)) {
+                mensajeError += `${error[prop]}\n`;
+            }
+        }
+console.log(error)
     } else {
+        console.log(datosTarjeta)
         ejecutarCompra(datosTarjeta)
     }
 }

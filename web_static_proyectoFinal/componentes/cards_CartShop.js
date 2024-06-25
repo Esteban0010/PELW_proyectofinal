@@ -1,6 +1,5 @@
 function cargarCartShop(){
   memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
-console.log(memoriaCart)
   const contCartasShop = document.getElementById('wrapper_cards_CartShop');
   contCartasShop.innerHTML = ''
   let i = 0;
