@@ -3,7 +3,7 @@ function cargarCartShop(){
   const contCartasShop = document.getElementById('wrapper_cards_CartShop');
   contCartasShop.innerHTML = ''
   let i = 0;
-  if(memoriaCart.length >0){
+  if(memoriaCart && memoriaCart.length >0){
     while (i < memoriaCart.length && i < 5) {
       let paquete = memoriaCart[i];
       let cartaShop = document.createElement('div');

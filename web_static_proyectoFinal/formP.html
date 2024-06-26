@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./formP.css">
+</head>
+<body>
+    <div class="contenedor" id="main">
+        <div class="registro">
+            <form action="#" class="form-regis">
+                <h1>Crear Cuenta</h1>
+                <div class="sponsor-contenedor">
+                    <a href="#" class="sponsor"><i class="icon"></i></a>
+                    <a href="#" class="sponsor"><i class="icon"></i></a>
+                    <a href="#" class="sponsor"><i class="icon"></i></a>
+                </div>
+               <p></p>
+               <input type="text" name="" placeholder="" required="">
+               <input type="text" name="" placeholder="" required="">
+               <input type="text" name="" placeholder="" required="">
+               <input type="text" name="" placeholder="" required="">
+               <input type="text" name="" placeholder="" required="">
+               <input type="text" name="" placeholder="" required="">
+
+              
+               <button>registrarme</button>
+            </form>
+        </div>
+        <div class="inicio-sesion">
+            <form action="#">
+                <h1>Iniciar Sesion</h1>
+                <div class="sponsor-contenedor">
+                    <a href="#" class="sponsor"><i class="icon"></i></a>
+                    <a href="#" class="sponsor"><i class="icon"></i></a>
+                    <a href="#" class="sponsor"><i class="icon"></i></a>
+                </div>
+               <p>Ingresa con tu cuenta</p>
+               <input type="text" name="" placeholder="" required="">
+               <input type="text" name="" placeholder="" required="">
+               <a href="">olvidaste tu contraseña?</a>
+               <button>Iniciar Sesion</button>
+            </form>
+        </div>
+        <div class="contenedor-covertor">
+            <div class="covertor">
+                <div class="covertor-derecho" >
+                    <h1>Bienvenido de Nuevo!</h1>
+                    <p>Mantengase conectado para acceder a su informacion personal.</p>
+                    <button id="registrate">Iniciar Sesion</button>
+                </div>
+                <div class="covertor-izquierdo" >
+                    <h1>Hola amigo!</h1>
+                    <p>Ingresa tu informacion personal para comenzar este viaje.</p>
+                   
+                    <button id="inicio-sesion">Registrate</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const btnRegistro=document.getElementById("registrate")
+        const btnSesion = document.getElementById("inicio-sesion")
+        const main= document.getElementById("main")
+        btnSesion.addEventListener("click",()=>{
+            main.classList.add("panel-activo-derecho");
+        })
+        btnRegistro.addEventListener("click",()=>{
+            main.classList.remove("panel-activo-derecho");
+        })
+    </script>
+</body>
+</html>

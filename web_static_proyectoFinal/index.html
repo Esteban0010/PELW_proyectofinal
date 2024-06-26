@@ -27,48 +27,119 @@
 
 
     <div class="modal" id="miModal">
-        <div class="modal-content">
-            <div>
-                <form action="">
-                    <input type="text" id="usuarioL" name="usuario">
-                    <label for="usuario">usuario</label>
-                    <input type="text" name="contraseñal" id="contraseñaL">
-                    <label for="contraseña">contraseña</label>
-                </form>
-                <button onclick="loguin()">Ingresar</button>
-                <button onclick="mostrarModalr()">Registrarme</button>
-            </div>
-            <button onclick="cerrarModal()">Cerrar</button>
-        </div>
-    </div>
-    <div class="modal_registro" id="miModalr">
-        <div class="modal-content_registro">
-            <div>
-                <form action="">
-                    <input type="text" name="nombreU" id="nombreU" required>
-                    <label for="nombreU">usuario</label>
-                    <input type="text" name="contraseña" id="contraseña" required>
-                    <label for="contraseña">contraseña</label>
-                    <input type="text" name="nombre" id="nombre" required>
-                    <label for="nombre">nombre</label>
-                    <input type="text" name="apellido" id="apellido" required>
-                    <label for="apellido">apellido</label>
-                    <input type="text" name="doc" id="doc" required>
-                    <label for="doc">documento</label>
-                    <label for="apellido">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                    <div class="date-inputs">
+
+        <div class="contenedor" id="main">
+            <div class="registro">
+                <form action="#" class="form-regis">
+                    <h1>Crear Cuenta</h1>
+                    <div class="sponsor-contenedor">
+                        <a href="#" class="sponsor"><i class="icon" ></i></a>
+                        <a href="#" class="sponsor"><i class="icon"></i></a>
+                        <a href="#" class="sponsor"><i class="icon"></i></a>
+                    </div>
+                    <p></p>
+                    <div class="group">
+                        <input type="text" name="nombreU" id="nombreU" required class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Usuario</label>
+                      </div>
+                      <div class="group">
+                        <input type="text" name="contraseña" id="contraseña" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Contraseña</label>
+                      </div>
+                      <div class="group">
+                        <input type="text" name="nombre" id="nombre" required class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Nombre</label>
+                      </div>
+                      <div class="group">
+                        <input type="text" name="apellido" id="apellido" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Apellido</label>
+                      </div>
+                      <div class="group">
+                        <input type="text" name="doc" id="doc" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Documento</label>
+                      </div>
+                      <div class="group">
+                        <input type="email" id="email" name="email" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                      </div>
+                      <div class="date-inputs">
                         <input type="text" id="dia" name="dia" placeholder="D&iacute;a">
                         <input type="text" id="mes" name="mes" placeholder="Mes">
                         <input type="text" id="anio" name="anio" placeholder="A&ntilde;o">
                     </div>
+                    <button onclick="validar()">registrarme</button>
                 </form>
-                <button onclick="validar()">Registro</button>
             </div>
-            <div id="errores"></div>
-            <button onclick="cerrarModalr()">Cerrar</button>
+            <div class="inicio-sesion">
+                <form action="#">
+                    <h1>Iniciar Sesion</h1>
+                    <div class="sponsor-contenedor">
+                        <a href="#" class="sponsor"><i class="icon"></i></a>
+                        <a href="#" class="sponsor"><i class="icon"></i></a>
+                        <a href="#" class="sponsor"><i class="icon"></i></a>
+                    </div>
+                    <p>Ingresa con tu cuenta</p>
+                    <div class="group">
+                        <input type="text" id="usuarioL" name="usuario" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Usuario</label>
+                      </div>
+                      <div class="group">
+                        <input type="text" name="contraseñal" id="contraseñaL" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Contraseña</label>
+                      </div>
+                    <a href="">olvidaste tu contraseña?</a>
+                    <button onclick="loguin()">Iniciar Sesion</button>
+                    
+                </form>
+            </div>
+            <div class="contenedor-covertor">
+                <div class="covertor">
+                    <div class="covertor-derecho">
+                        <h1>Bienvenido de Nuevo!</h1>
+                        <p>Mantengase conectado para acceder a su informacion personal.</p>
+                        <button id="registrate">Inicia Sesion</button>
+                        <button onclick="cerrarModal()">X</button>
+                    </div>
+                    <div class="covertor-izquierdo">
+                        <h1>Hola amigo!</h1>
+                        <p>Ingresa tu informacion personal para comenzar este viaje.</p>
+
+                        <button id="inicio-sesion">Registrate</button>
+                        <button onclick="cerrarModal()">X</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+        <script type="text/javascript">
+            const btnRegistro = document.getElementById("registrate")
+            const btnSesion = document.getElementById("inicio-sesion")
+            const main = document.getElementById("main")
+            btnSesion.addEventListener("click", () => {
+                main.classList.add("panel-activo-derecho");
+            })
+            btnRegistro.addEventListener("click", () => {
+                main.classList.remove("panel-activo-derecho");
+            })
+        </script>
+
     </div>
 
     <script>
@@ -79,6 +150,8 @@
         function cerrarModal() {
             document.getElementById('miModal').style.display = 'none';
         }
+        
+       
         function mostrarModalr() {
             document.getElementById('miModalr').style.display = 'flex';
             cerrarModal()
@@ -94,7 +167,7 @@
     <div>
         <article class="card">
             <div class="cover">
-                <a target="_blank" >
+                <a target="_blank">
                     <img src='https://res.cloudinary.com/ddroxn7iv/image/upload/v1664201968/Repositorio/Astronauta_3d_t1axew.png'
                         alt="" />
                 </a>

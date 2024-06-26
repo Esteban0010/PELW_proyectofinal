@@ -10,6 +10,7 @@
     <script src="/script/data_destinos.js"></script>
     <script src="/script/servicioCart.js"></script>
     <script src="/script/validacionTarjeta.js"></script>
+    <script src="/script/logRegistro.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,67 @@
         
 
     </div>
+    <div class="modal" id="miModal">
+        <div class="modal-content">
+            <div>
+                <form action="">
+                    <input type="text" id="usuarioL" name="usuario">
+                    <label for="usuario">usuario</label>
+                    <input type="text" name="contraseñal" id="contraseñaL">
+                    <label for="contraseña">contraseña</label>
+                </form>
+                <button onclick="loguin()">Ingresar</button>
+                <button onclick="mostrarModalr()">Registrarme</button>
+            </div>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+    <div class="modal_registro" id="miModalr">
+        <div class="modal-content_registro">
+            <div>
+                <form action="">
+                    <input type="text" name="nombreU" id="nombreU" required>
+                    <label for="nombreU">usuario</label>
+                    <input type="text" name="contraseña" id="contraseña" required>
+                    <label for="contraseña">contraseña</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="nombre">nombre</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                    <label for="apellido">apellido</label>
+                    <input type="text" name="doc" id="doc" required>
+                    <label for="doc">documento</label>
+                    <label for="apellido">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <div class="date-inputs">
+                        <input type="text" id="dia" name="dia" placeholder="D&iacute;a">
+                        <input type="text" id="mes" name="mes" placeholder="Mes">
+                        <input type="text" id="anio" name="anio" placeholder="A&ntilde;o">
+                    </div>
+                </form>
+                <button onclick="validar()">Registro</button>
+            </div>
+            <div id="errores"></div>
+            <button onclick="cerrarModalr()">Cerrar</button>
+        </div>
+    </div>
+    <script>
+        function mostrarModal() {
+            document.getElementById('miModal').style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('miModal').style.display = 'none';
+        }
+        function mostrarModalr() {
+            document.getElementById('miModalr').style.display = 'flex';
+            cerrarModal()
+        }
+
+        function cerrarModalr() {
+            document.getElementById('miModalr').style.display = 'none';
+        }
+    </script>
     <script src="../componentes/cards_CartShop.js"></script>
     <script src="../componentes/metodoPago.js"></script>
     <script src="../componentes/header.js"></script>

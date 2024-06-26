@@ -34,7 +34,10 @@ function eliminardelCarrito(id) {
 function actualizarNumCarrito(){
     const cuentaCarritoElement = document.getElementById("cuenta-carrito")
     const memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
-    const cuenta= memoriaCart.length;
-    cuentaCarritoElement.innerText = cuenta
+    if(memoriaCart){
+        const cuenta= memoriaCart.length;
+        cuentaCarritoElement.innerText = cuenta
+    }
+   
 
 }

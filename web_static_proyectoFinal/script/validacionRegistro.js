@@ -93,11 +93,11 @@ function validar() {
     const valEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const datos={}
-    datos.usuario = document.getElementById('nombreU').value;
+    datos.usuario = document.getElementById('nombreU').value.toLowerCase();
     datos.contraseña = document.getElementById('contraseña').value;
     datos.documento = document.getElementById('doc').value;
-    datos.nombre = document.getElementById('nombre').value;
-    datos.apellido = document.getElementById('apellido').value;
+    datos.nombre = document.getElementById('nombre').value.toLowerCase();
+    datos.apellido = document.getElementById('apellido').value.toLowerCase();
     datos.email = document.getElementById('email').value;
     const dia = document.getElementById("dia").value;
     const mes = document.getElementById("mes").value;
@@ -106,9 +106,13 @@ function validar() {
 
 
     let memoriaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
+    if(!memoriaUsuarios){
+        localStorage.setItem("usuarios",JSON.stringify([]));
+        memoriaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
+    }
     let i = 0;
     let userCoincidencia = false;
-    while(!userCoincidencia && memoriaUsuarios.length >i ){
+    while(!userCoincidencia && memoriaUsuarios && memoriaUsuarios.length >i ){
         let usuarioEnMemoria=memoriaUsuarios[i];
         if(usuarioEnMemoria.usuario == datos.usuario){
             error.usuario = "Nombre de Usuario ya existente";
