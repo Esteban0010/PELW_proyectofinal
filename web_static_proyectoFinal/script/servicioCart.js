@@ -1,15 +1,20 @@
 
 function agregarAlCarrito(producto) {
     let memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
+    let gastoTotal = JSON.parse(localStorage.getItem("total"));
     if (!memoriaCart) {
         const nuevoProducto = producto;
+        localStorage.setItem("total", JSON.stringify(parseInt(nuevoProducto.precio)))
         localStorage.setItem("paquetes", JSON.stringify([nuevoProducto]))
     } else {
         const indiceProduct = memoriaCart.findIndex(e => e.id === producto.id);
-        console.log(indiceProduct,"indice prod",producto.id)
         if (indiceProduct === -1) {
             const nuevaMemoria = memoriaCart;
-            nuevaMemoria.push(producto)
+            console.log(gastoTotal,"asdasd")
+            gastoTotal =parseInt(producto.precio)
+            console.log(gastoTotal)
+            nuevaMemoria.push(producto);
+            localStorage.setItem("total", JSON.stringify(gastoTotal))
             localStorage.setItem("paquetes",JSON.stringify(nuevaMemoria))
         }else{
             alert("Ya incluyo en su viaje ese paquete")
@@ -40,4 +45,11 @@ function actualizarNumCarrito(){
     }
    
 
+}
+
+function limpiarCarrito(){
+    localStorage.removeItem("paquetes")
+    localStorage.removeItem("total")
+    actualizarNumCarrito()
+    cargarCartShop()
 }

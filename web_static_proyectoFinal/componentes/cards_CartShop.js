@@ -1,6 +1,9 @@
 function cargarCartShop(){
-  memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
+  let memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
+  let total = JSON.parse(localStorage.getItem("total"));
   const contCartasShop = document.getElementById('wrapper_cards_CartShop');
+  const gastoTotal = document.getElementById('gasto-total');
+  gastoTotal.innerHTML =total
   contCartasShop.innerHTML = ''
   let i = 0;
   if(memoriaCart && memoriaCart.length >0){

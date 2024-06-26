@@ -7,7 +7,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "2",
-    precio: "500,000",
+    precio: "500000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   },
   {
@@ -18,7 +18,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "3",
-    precio: "600,000",
+    precio: "600000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   },
   {
@@ -29,7 +29,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "4",
-    precio: "750,000",
+    precio: "750000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   },
   {
@@ -40,7 +40,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "3",
-    precio: "650,000",
+    precio: "650000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   },
   {
@@ -51,7 +51,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "2 días",
-    precio: "550,000",
+    precio: "550000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   },
   {
@@ -62,7 +62,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "5",
-    precio: "900,000",
+    precio: "900000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   },
   {
@@ -73,7 +73,7 @@ const paquetesLuna = [
     img: "./assets/cañon.jpg",
     video:"../assets/base_lunar.mp4",
     duracion: "4",
-    precio: "800,000",
+    precio: "800000",
     incluye: ["Transporte Espacial", "Alojamiento", "Comidas", "Equipo de Exploración"]
   }
 ];

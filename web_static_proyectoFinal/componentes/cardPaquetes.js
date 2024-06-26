@@ -2,7 +2,6 @@ const contCartas = document.getElementById('contenedor_card');
 let i = 0;
 
 while (i < paquetesLuna.length && i < 5) {
-    console.log(paquetesLuna[i])
   let paquete = paquetesLuna[i];
   const carta = document.createElement('div');
 
