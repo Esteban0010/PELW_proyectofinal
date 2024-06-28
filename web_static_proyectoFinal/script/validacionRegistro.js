@@ -110,6 +110,7 @@ function validar() {
         localStorage.setItem("usuarios",JSON.stringify([]));
         memoriaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
     }
+ 
     let i = 0;
     let userCoincidencia = false;
     while(!userCoincidencia && memoriaUsuarios && memoriaUsuarios.length >i ){
@@ -126,6 +127,7 @@ function validar() {
             error.email = "Email ya registrado"
             userCoincidencia =true;
         }
+        i++
     }
 
 

@@ -27,3 +27,21 @@ function cerrarSecion(){
     localStorage.removeItem("usuario")
     montarHeader()
 }
+
+
+function ocultarRegistro(){
+    let main = document.getElementById("main")
+    main.classList.remove("panel-activo-derecho");
+}
+
+function mostrarRegistro(){
+    let main = document.getElementById("main")
+    main.classList.add("panel-activo-derecho");
+}
+function mostrarModal() {
+document.getElementById('miModal').style.display = 'flex';
+}
+
+function cerrarModal() {
+document.getElementById('miModal').style.display = 'none';
+}

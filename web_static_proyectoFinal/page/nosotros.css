@@ -1,17 +1,29 @@
 .contenedor_nosotros{
-    margin-top: 100px;
     width: 80%;
+    padding-top: 180px;
+    background-color: #181822;
 }
 
 .wrapper_contenidoNosotros{
+
     display: flex;
-    min-height: 250px;
+
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 200px;
+}
+
+.centroCont{
+background-color: rgba(92, 88, 88, 0.354);
 }
 .contenidoNosotros{
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 40px;
     align-items: center;
     width: 50%;
-    height: 400px;
-    padding: 15px;
+    height: 350px;
+  
 }
 .contenidoNosotros p{
     font-weight: 500;
@@ -29,4 +41,9 @@
 
 .cont_text_respresentantes{
     margin: 50px 20px;
+}
+
+.videoMision{
+    padding: 40px 0px;
+    width: 40%;
 }

@@ -11,10 +11,10 @@ function montarHeader(){
             <li><a href="/">Inicio</a></li>
             <li><a href="/page/paquetes.html">Paquetes</a></li>
             <li><a href="/page/nosotros.html">Nosotros</a></li>
-            <li><a href="#">???</a></li>
+            <li><a href="/page/noticias.html">Noticias</a></li>
             <li>${user ? '<a href="/page/perfil.html">Perfil</a>' : '<button class="abrir-modal" onclick="mostrarModal()">Ingresar</button>'}</li>
             ${user ?'<li><a href="#"><button class="abrir-modal" onclick="cerrarSecion()">salir</button></li>':""}
-            <li><a href="/page/carritoCompras.html"><img class="cart-icon" src="../assets/cart-shop.png"/><div id="cuenta-carrito" class="cuenta">0</div></a></li>
+            <li><a href="/page/carritoCompras.html" style="position: relative"><img class="cart-icon" src="../assets/cart-shop.png"/><div id="cuenta-carrito" class="cuenta">0</div></a></li>
         </ul>
     </header>
     `;

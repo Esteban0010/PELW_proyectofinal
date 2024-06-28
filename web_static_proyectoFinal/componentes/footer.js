@@ -37,6 +37,6 @@ const contenido = `
 </div>
 `;
 
-footerE.innerHTML = contenido;
-contenedorFooter.appendChild(footerE);
+contenedorFooter.innerHTML= contenido;
+
 

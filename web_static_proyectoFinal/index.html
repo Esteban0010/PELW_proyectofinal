@@ -24,6 +24,7 @@
             </div>
         </div>
     </div>
+    
 
 
     <div class="modal" id="miModal">
@@ -111,56 +112,32 @@
                     <div class="covertor-derecho">
                         <h1>Bienvenido de Nuevo!</h1>
                         <p>Mantengase conectado para acceder a su informacion personal.</p>
-                        <button id="registrate">Inicia Sesion</button>
+                        <button id="registrate" onclick="ocultarRegistro()">Inicia Sesion</button>
                         <button onclick="cerrarModal()">X</button>
                     </div>
                     <div class="covertor-izquierdo">
                         <h1>Hola amigo!</h1>
                         <p>Ingresa tu informacion personal para comenzar este viaje.</p>
 
-                        <button id="inicio-sesion">Registrate</button>
+                        <button id="inicio-sesion" onclick="mostrarRegistro()">Registrate</button>
                         <button onclick="cerrarModal()">X</button>
                     </div>
                 </div>
 
             </div>
         </div>
-
-        <script type="text/javascript">
-            const btnRegistro = document.getElementById("registrate")
-            const btnSesion = document.getElementById("inicio-sesion")
-            const main = document.getElementById("main")
-            btnSesion.addEventListener("click", () => {
-                main.classList.add("panel-activo-derecho");
-            })
-            btnRegistro.addEventListener("click", () => {
-                main.classList.remove("panel-activo-derecho");
-            })
-        </script>
-
     </div>
 
     <script>
-        function mostrarModal() {
-            document.getElementById('miModal').style.display = 'flex';
-        }
-
-        function cerrarModal() {
-            document.getElementById('miModal').style.display = 'none';
-        }
-        
        
-        function mostrarModalr() {
-            document.getElementById('miModalr').style.display = 'flex';
-            cerrarModal()
-        }
-
-        function cerrarModalr() {
-            document.getElementById('miModalr').style.display = 'none';
-        }
     </script>
     <h1 class="title_package">Paquetes de viaje</h1>
     <div class="wrapper_card" id="wrapper_card">
+    </div>
+    <!-- <div class="cont-destinos">
+
+        
+
     </div>
     <div>
         <article class="card">
@@ -177,7 +154,7 @@
                 <button>Leer mas</button>
             </div>
         </article>
-    </div>
+    </div> -->
     <div class="wrapper_footer" id="wrapper_footer">
     </div>
     <script src="componentes/card_paquetes.js"></script>

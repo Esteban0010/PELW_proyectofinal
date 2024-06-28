@@ -6,7 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="./perfil.css">
-    <script  src="/script/servicioCart.js"></script>
+    <script src="/script/data_destinos.js"></script>
+    <script src="/script/servicioCart.js"></script>
+    <script src="/script/validacionTarjeta.js"></script>
+    <script src="/script/logRegistro.js"></script>
 </head>
 <body>
     <div class="wrapper_header" id="wrapper_header"></div>
@@ -48,6 +51,7 @@
             packetes Adquiridos
         </div>
         
+        
     </div>
     <script>
         const user = JSON.parse(localStorage.getItem("usuario"));
@@ -65,6 +69,7 @@ nombreD.innerHTML ="Nombre: "+usuarioEncontrado.nombre;
 apellidoD.innerHTML ="Apellido: "+ usuarioEncontrado.apellido;
 fechaND.innerHTML ="fecha de nacimiento: "+ usuarioEncontrado.fechaNacimiento;
     </script>
+    <script src="../componentes/footer.js"></script>
      <script src="../componentes/header.js"></script>
     
 </body>

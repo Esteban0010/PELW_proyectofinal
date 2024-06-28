@@ -1,2 +1,31 @@
-.cont_prod{margin-top: 100px;}
+.cont-paquetes{
+    width: 80%;
+    padding-top: 180px;
+    background-color: #181822;
+}
+
+
+.cont_prod{
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.cont_descrip_paquetes{
+    padding-block: 40px;
+    font-size: 30px;
+    width: 80%;
+}
+.cont_descrip_paquetes p{
+    font-size: 12px;
+    width: 80%;
+}
+
+.cont_descrip_paquetes button{
+    margin: 0;
+
+}
+
 

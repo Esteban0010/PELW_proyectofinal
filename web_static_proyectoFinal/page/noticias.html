@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../page/carrito.css">
+    <link rel="stylesheet" href="./noticias.css">
     <script src="/script/data_destinos.js"></script>
     <script src="/script/servicioCart.js"></script>
     <script src="/script/validacionTarjeta.js"></script>
     <script src="/script/logRegistro.js"></script>
 </head>
-
 <body>
     <div class="wrapper_header" id="wrapper_header"></div>
-    <div class="cont_carrito">
-        <div class="cont_cart">
-            <h1>Finaliza la compra </h1>
-            <div class="wrapper_cards_CartShop" id='wrapper_cards_CartShop'>
-            </div>
-            <div class="btn-y-gasto">
-                <button onclick="limpiarCarrito()">borrar todo</button><div id="gasto-total">total</div>
-            </div>
+    <div class="contenedor-noticias">
+        <div class="wrapper-noti">
+            <h2>Viajes a Martes, el futuro del turismo espacial</h2>
+            <p>
+                 Empresas como Blue Origin y
+                 SpaceX están llevando el turismo espacial al siguiente nivel. El millonario Yusaku Maezawa planea realizar el primer viaje civil lunar en 2023 junto a ocho personas. Además, la empresa Axiom Space enviará a tres empresarios por 
+                10 días de vacaciones al espacio, volando con SpaceX
+            </p>
+    
+        </div>
+        <div class="wrapper-noti">
+            <h2>Turismo en la Luna: fechas, precios y empresas que harán el inédito viaje</h2>
+            <p>
+                La NASA organizará viajes turísticos a la Estación Espacial Internacional a partir de 2020, lo que incluye la posibilidad de hacer turismo en la Luna.
+            </p>
             
-        
         </div>
-        <div class="wrapper_MetodoPago" id="wrapper_MetodoPago">
-
+        <div class="wrapper-noti">
+            <h2>Turismo en la Luna puede ser posible en el 2023</h2>
+            <p>
+                 Grandes empresas internacionales se suman a la visión de un turismo lunar a corto plazo. Este tema se discutirá en el evento SUTUS 2022, donde se explorarán las posibilidades de turismo espacia.
+            </p>
+            
         </div>
-        
-
     </div>
     <div class="modal" id="miModal">
-       
+
         <div class="contenedor" id="main">
             <div class="registro">
                 <form action="#" class="form-regis">
@@ -132,40 +138,8 @@
             </div>
         </div>
     </div>
-    
-    <script>
-        const btnRegistro = document.getElementById("registrate")
-            const btnSesion = document.getElementById("inicio-sesion")
-            const main = document.getElementById("main")
-            btnSesion.addEventListener("click", () => {
-                main.classList.add("panel-activo-derecho");
-            })
-            btnRegistro.addEventListener("click", () => {
-                main.classList.remove("panel-activo-derecho");
-            })
-
-        function mostrarModal() {
-            document.getElementById('miModal').style.display = 'flex';
-        }
-
-        function cerrarModal() {
-            document.getElementById('miModal').style.display = 'none';
-        }
-        
-       
-        function mostrarModalr() {
-            document.getElementById('miModalr').style.display = 'flex';
-            cerrarModal()
-        }
-
-        function cerrarModalr() {
-            document.getElementById('miModalr').style.display = 'none';
-        }
-    </script>
-    <script src="../componentes/cards_CartShop.js"></script>
-    <script src="../componentes/metodoPago.js"></script>
+    <div class="wrapper_footer" id="wrapper_footer">
     <script src="../componentes/header.js"></script>
     <script src="../componentes/footer.js"></script>
 </body>
-
 </html>

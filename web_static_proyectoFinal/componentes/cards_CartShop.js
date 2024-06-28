@@ -3,7 +3,11 @@ function cargarCartShop(){
   let total = JSON.parse(localStorage.getItem("total"));
   const contCartasShop = document.getElementById('wrapper_cards_CartShop');
   const gastoTotal = document.getElementById('gasto-total');
-  gastoTotal.innerHTML =total
+  let totalGasto = "$ 00000";
+  if(total!=null){
+ totalGasto = "$ "+total;
+  }
+  gastoTotal.innerHTML =totalGasto
   contCartasShop.innerHTML = ''
   let i = 0;
   if(memoriaCart && memoriaCart.length >0){

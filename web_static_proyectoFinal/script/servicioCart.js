@@ -11,7 +11,7 @@ function agregarAlCarrito(producto) {
         if (indiceProduct === -1) {
             const nuevaMemoria = memoriaCart;
             console.log(gastoTotal,"asdasd")
-            gastoTotal =parseInt(producto.precio)
+            gastoTotal +=parseInt(producto.precio)
             console.log(gastoTotal)
             nuevaMemoria.push(producto);
             localStorage.setItem("total", JSON.stringify(gastoTotal))
@@ -26,8 +26,14 @@ function eliminardelCarrito(id) {
     const memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
     const indice = memoriaCart.findIndex(item => item.id === id);
     if (indice !== -1) {
+
+        let gastoTotal = JSON.parse(localStorage.getItem("total"));
+        gastoTotal -=parseInt(memoriaCart[indice].precio)
+        localStorage.setItem("total", JSON.stringify(gastoTotal))
+
         memoriaCart.splice(indice, 1);
         localStorage.setItem("paquetes",JSON.stringify(memoriaCart))
+        
         console.log('Elemento eliminado correctamente.');
       } else {
         console.log('No se encontró ningún elemento con ese ID.');
