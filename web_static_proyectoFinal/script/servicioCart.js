@@ -2,6 +2,7 @@
 function agregarAlCarrito(producto) {
     let memoriaCart = JSON.parse(localStorage.getItem("paquetes"));
     let gastoTotal = JSON.parse(localStorage.getItem("total"));
+    console.log(producto)
     if (!memoriaCart) {
         const nuevoProducto = producto;
         localStorage.setItem("total", JSON.stringify(parseInt(nuevoProducto.precio)))
@@ -10,7 +11,7 @@ function agregarAlCarrito(producto) {
         const indiceProduct = memoriaCart.findIndex(e => e.id === producto.id);
         if (indiceProduct === -1) {
             const nuevaMemoria = memoriaCart;
-            console.log(gastoTotal,"asdasd")
+            console.log(producto.precio,"asdasd")
             gastoTotal +=parseInt(producto.precio)
             console.log(gastoTotal)
             nuevaMemoria.push(producto);

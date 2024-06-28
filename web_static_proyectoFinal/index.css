@@ -387,16 +387,32 @@ header {
  }
  /*////////////////////////////Footer//////////////////////////////*/
  .wrapper_footer{
-   
+   display: flex;
+   justify-content: space-between;
     padding-inline: 10%;
-    background-color: #69696b;
+    background-color: #2b3a4a;
     width: 100%;
-    height: 250px;
+    height: 150px;
+    margin: 0;
  }
  .footer{
+    width: 100%;
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
  }
+ .footer .contacto{
+    width: 30%;
+    color: rgb(224, 218, 218);
+ }
+
+ .footer .redes-sociales{
+    width: 30%;
+    display:grid;
+ }
+
+ 
+
 
   /* Estilos para el botón */
   .abrir-modal {
@@ -626,8 +642,13 @@ margin: 0 5px;
 display: inline-flex;
 justify-content: center;
 align-items: center;
-border: 1px solid #ccc;
+
 border-radius: 50%;
+overflow: hidden;
+}
+.icon{
+    height: 40px;
+    width: 65px;
 }
 
  
